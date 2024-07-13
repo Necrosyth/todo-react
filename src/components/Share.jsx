@@ -30,7 +30,7 @@ function Share() {
 	}, [searchString]);
 
 	return (
-		<div className="bg-base-300 text-neutral-content m-4 h-full w-full max-w-2xl rounded-lg p-8 shadow-lg">
+		<div className="bg-base-300 text-neutral-content m-4 h-full w-full max-w-2xl rounded-lg p-8 shadow-lg pointer-events-auto">
 			<div className="text-base-content mb-6 text-center text-3xl font-semibold">
 				Todos Shared with you
 			</div>

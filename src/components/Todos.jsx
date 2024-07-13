@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { TodoProvider } from "../contexts/Todo";
 import TodoForm from "./TodoForm";
 import TodoBody from "./TodoBody";
+import { BackgroundBeams } from "./ui/background-beams";
 
 function Todos() {
 	const [todos, setTodos] = useState([]);
@@ -52,10 +53,15 @@ function Todos() {
 	}, [todos]);
 
 	return (
+		<>
+		<BackgroundBeams/>
+
+	
 		<TodoProvider
 			value={{ todos, addTodo, deleteTodo, updateTodo, toggleTodo }}
+
 		>
-			<div className="bg-base-300 text-neutral-content m-4 h-full w-full max-w-2xl rounded-lg p-8 shadow-lg">
+			<div className="bg-base-300 z-10 text-neutral-content m-4 h-full w-full max-w-2xl rounded-lg p-8 shadow-lg">
 				<div className="text-base-content mb-6 text-center text-3xl font-semibold">
 					Manage Your Todos
 				</div>
@@ -63,6 +69,8 @@ function Todos() {
 				<TodoBody todos={todos} setTodos={setTodos} />
 			</div>
 		</TodoProvider>
+		
+		</>
 	);
 }
 

@@ -3,6 +3,7 @@ import Todos from "./components/Todos";
 import Share from "./components/Share";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { BackgroundBeams } from "./components/ui/background-beams";
 
 function App() {
 	const router = createBrowserRouter(
@@ -19,6 +20,8 @@ function App() {
 				<Route path="" element={<Navigate to="todos" />} />
 				<Route path="todos" element={<Todos />} />
 				<Route path="share" element={<Share />} />
+				
+
 			</Route>,
 		),
 	);

@@ -3,6 +3,7 @@ import TodoItem from "./TodoItem.jsx";
 import Themes from "./Themes.jsx";
 import { toast } from "react-toastify";
 
+
 function TodoBody({ todos, setTodos }) {
 	const [filteredTodos, setFilteredTodos] = useState(todos);
 	const [searchString, setSearchString] = useState("");
@@ -23,6 +24,7 @@ function TodoBody({ todos, setTodos }) {
 
 	return (
 		<>
+		
 			<div className="flex w-full gap-2">
 				<input
 					type="text"
